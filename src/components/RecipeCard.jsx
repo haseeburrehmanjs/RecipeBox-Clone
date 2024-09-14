@@ -15,6 +15,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -47,55 +48,42 @@ export default function RecipeReviewCard({ item }) {
     setExpanded(!expanded);
   };
 
-  const { name, image, id, rating, reviewCount, instructions } = item
+  const { name, image, id, cuisine, userId, instructions } = item
 
   return (
-    <Link to={`/home/${id}`}>
-      <Card sx={{ maxWidth: 345 }}>
-        <CardHeader
-          avatar={
-            <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-              R
-            </Avatar>
-          }
-          action={
-            <IconButton aria-label="settings">
-              <MoreVertIcon />
-            </IconButton>
-          }
-          title="Shrimp and Chorizo Paella"
-          subheader="September 14, 2016"
-        />
-        <CardMedia
-          component="img"
-          height="194"
-          image={image}
-          alt="Paella dish"
-        />
-        <CardContent>
-          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            {name}
-          </Typography>
-        </CardContent>
-        <CardActions disableSpacing>
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
+    <Card sx={{ maxWidth: 345, padding: 1 }}>
+      <CardHeader
+        avatar={
+          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+            <img src={image} alt="" />
+          </Avatar>
+        }
+        action={
+          <IconButton aria-label="settings">
+            <MoreVertIcon />
           </IconButton>
-          <IconButton aria-label="share">
-            <ShareIcon />
-          </IconButton>
-          <ExpandMore
-            expand={expanded}
-            onClick={handleExpandClick}
-            aria-expanded={expanded}
-            aria-label="show more"
-          >
-            <ExpandMoreIcon />
-          </ExpandMore>
-        </CardActions>
-        <Collapse in={expanded} timeout="auto" unmountOnExit>
-        </Collapse>
-      </Card>
-    </Link>
+        }
+        title={cuisine}
+        subheader={userId}
+      />
+      <CardMedia
+        component="img"
+        height="194"
+        image={image}
+        alt="Paella dish"
+      />
+      <CardContent>
+        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          {name}
+        </Typography>
+      </CardContent>
+      <Button variant='contained' color='warning' className='text-center '>
+        <Link to={`/home/${id}`}>
+          Read More
+        </Link>
+      </Button>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      </Collapse>
+    </Card>
   );
 }
