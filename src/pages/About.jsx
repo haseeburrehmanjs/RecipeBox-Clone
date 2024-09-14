@@ -1,3 +1,4 @@
+import { Button } from '@mui/material'
 import React from 'react'
 
 const About = () => {
@@ -26,7 +27,8 @@ const About = () => {
                                     bag selfies, poke vaporware kombucha lumbersexual pork belly
                                     polaroid hoodie portland craft beer.
                                 </p>
-                                <a className="text-indigo-500 inline-flex items-center mt-4">
+                                <div className='mt-3'>
+                                <Button variant='contained' color='warning'>
                                     Learn More
                                     <svg
                                         className="w-4 h-4 ml-2"
@@ -40,7 +42,8 @@ const About = () => {
                                         <path d="M5 12h14" />
                                         <path d="M12 5l7 7-7 7" />
                                     </svg>
-                                </a>
+                                </Button>
+                                </div>
                             </div>
                         </div>
                         <div className="py-8 flex flex-wrap md:flex-nowrap" bis_skin_checked={1}>
@@ -63,7 +66,8 @@ const About = () => {
                                     bag selfies, poke vaporware kombucha lumbersexual pork belly
                                     polaroid hoodie portland craft beer.
                                 </p>
-                                <a className="text-indigo-500 inline-flex items-center mt-4">
+                                <div className='mt-3'>
+                                <Button variant='contained' color='warning'>
                                     Learn More
                                     <svg
                                         className="w-4 h-4 ml-2"
@@ -77,7 +81,8 @@ const About = () => {
                                         <path d="M5 12h14" />
                                         <path d="M12 5l7 7-7 7" />
                                     </svg>
-                                </a>
+                                </Button>
+                                </div>
                             </div>
                         </div>
                         <div className="py-8 flex flex-wrap md:flex-nowrap" bis_skin_checked={1}>
@@ -100,7 +105,8 @@ const About = () => {
                                     bag selfies, poke vaporware kombucha lumbersexual pork belly
                                     polaroid hoodie portland craft beer.
                                 </p>
-                                <a className="text-indigo-500 inline-flex items-center mt-4">
+                                <div className='mt-3'>
+                                <Button variant='contained' color='warning'>
                                     Learn More
                                     <svg
                                         className="w-4 h-4 ml-2"
@@ -114,7 +120,8 @@ const About = () => {
                                         <path d="M5 12h14" />
                                         <path d="M12 5l7 7-7 7" />
                                     </svg>
-                                </a>
+                                </Button>
+                                </div>
                             </div>
                         </div>
                     </div>
