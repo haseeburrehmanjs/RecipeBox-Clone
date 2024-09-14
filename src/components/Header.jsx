@@ -4,7 +4,7 @@ import React from 'react'
 const Header = () => {
     return (
         <>
-            <div className='container mx-auto flex flex-wrap items-center justify-between mt-[60px]'>
+            <div className='container mx-auto flex flex-wrap items-center justify-center gap-[100px] mt-[60px]'>
                 <div>
                     <h1 className='text-4xl'>Save recipes from <br /> anywhere.</h1>
                     <p className='mt-8 text-[20px]'>RecipeBox keeps just the recipe to let you focus <br />  on cooking. For the best experience, and the<br />  ability to save from mobile apps, use our iOS and<br />  Android apps.</p>
